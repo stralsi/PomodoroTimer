@@ -1,0 +1,33 @@
+﻿<Window x:Class="PomodoroTimer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:PomodoroTimer"
+        Title="Pomodoro timer" Height="200" Width="350">
+    <Window.DataContext>
+        <local:MainViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="startTimeTxt" Grid.Column="0" FontSize="50" Text="{Binding RemainingTime, StringFormat=mm:ss}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Slider Orientation="Vertical" Grid.Column="1" Value="{Binding Volume}" Minimum="0" Maximum="1" TickFrequency="0.1" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Work" Click="Work_Click" />
+            <Button Grid.Column="1" Content="Break" Click="Break_Click" />
+            <Button Grid.Column="2" Content="Stop" Click="Stop_Click" />
+        </Grid>  
+    </Grid>
+</Window>
