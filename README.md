@@ -7,4 +7,4 @@ There are so many pomodoro timers out there that it was simpler to make one than
 This one plays a subtle ticking sound while it is counting down.  
 I like it more this way because it reminds me to stay focused.
 
-Sounds come from here [https://www.freesound.org/people/EagleStealthTeam/sounds/209698/]
+Sounds come from here https://www.freesound.org/people/EagleStealthTeam/sounds/209698/
