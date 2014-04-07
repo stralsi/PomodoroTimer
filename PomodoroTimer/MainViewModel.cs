@@ -28,7 +28,7 @@ namespace PomodoroTimer
             }
         }
 
-        private double volume = 0.2;
+        private double volume = 0.5;
         public double Volume
         {
             get
